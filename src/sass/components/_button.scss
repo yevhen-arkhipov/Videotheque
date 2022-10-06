@@ -1,0 +1,30 @@
+.btn {
+  min-width: 148px;
+  min-height: 42px;
+  padding: 0 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $mainBtnBgColor;
+    color: $btnHoverColor;
+    border-color: $mainBtnBgColor;
+    
+  }
+
+  &--light {
+    color: $btnLightColor;
+    border: 1px solid $btnLightBorderColor;
+  }
+
+  &--dark {
+    color: $btnDarkColor;
+    border: 1px solid $btnDarkBorderColor;
+  }
+}

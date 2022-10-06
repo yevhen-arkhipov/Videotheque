@@ -1,0 +1,201 @@
+.theme-switch__control {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 2%;
+  right: 5%;
+
+  &:before {
+    content: 'DARK';
+    @include font(500, 10px, 1.16, null);
+    font-family: inherit;
+    text-transform: uppercase;
+    color: $descrTextColor;
+    box-shadow: 0px 0px 62px 2px rgba(0, 0, 0, 0.33);
+  }
+  &:after {
+    content: 'LIGHT';
+    @include font(500, 10px, 1.16, null);
+    font-family: inherit;
+    text-transform: uppercase;
+    color: $mainTextColor;
+    box-shadow: 0px 0px 62px 2px rgba(0, 0, 0, 0.33);
+  }
+
+  @media screen and (min-width: 480px) {
+    top: 2%;
+    right: 5%;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 2%;
+    right: 5%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 2%;
+    right: 3%;
+
+    &:before {
+      @include font(500, 12px, 1.16, null);
+    }
+    &:after {
+      @include font(500, 12px, 1.16, null);
+    }
+  }
+}
+
+.theme-switch__track {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  background-color: $descrTextColor;
+  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1), 0px 0px 10px 1px #ef4247;
+  border-radius: 50px;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s cubic-bezier(0, -1.85, 0.27, 1.75);
+    height: 20px;
+    width: 20px;
+    background-color: $descrTextColor;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 3px $mainTextColor;
+  }
+}
+
+.theme-switch__toggle {
+  position: relative;
+  display: none;
+  &:checked + .theme-switch__track {
+    background-color: #57de72;
+    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1),
+      0px 0px 10px 6px rgba(3, 132, 28, 0.5411764705882353);
+
+    &:before {
+      width: 2px;
+      background-color: $mainTextColor;
+    }
+  }
+}
+
+body.light-theme {
+  background-color: $mainTextColor;
+  color: $titleTextColor;
+}
+
+.light-theme {
+  .theme-switch__control:before {
+    color: $mainTextColor;
+  }
+  .theme-switch__control:after {
+    color: $descrTextColor;
+  }
+}
+
+body.dark-theme {
+  background-color: $darkBodyColor;
+}
+
+.footer.dark-theme {
+  background-color: $darkFooterColor;
+  color: $mainTextColor;
+}
+
+body.dark-theme .movie-card__title,
+body.dark-theme .library-card__title {
+  color: $mainTextColor;
+}
+
+body.light-theme .movie-card__title {
+  color: $titleTextColor;
+}
+
+.footer.dark-theme .footer__text--begin,
+.footer.dark-theme .footer__link {
+  color: $descrTextColor;
+}
+
+.movie-modal.dark-theme {
+  background-color: $darkBodyColor;
+}
+
+.movie-modal.dark-theme td:last-child,
+.movie-modal.dark-theme .movie-modal__descr-title,
+.movie-modal.dark-theme p,
+.movie-modal.dark-theme .movie-modal__title {
+  color: $mainTextColor;
+}
+
+.movie-modal.dark-theme svg {
+  fill: $mainTextColor;
+}
+
+.movie-modal.dark-theme .btn--dark {
+  color: $mainTextColor;
+  border: 1px solid $mainTextColor;
+  &:hover,
+  &:focus {
+    background-color: $mainBtnBgColor;
+    color: $btnHoverColor;
+    border-color: $mainBtnBgColor;
+  }
+}
+
+.team-modal.dark-theme,
+.team-modal.dark-theme .team-modal-close-btn {
+  background-color: $darkBodyColor;
+}
+
+.team-modal.dark-theme h2,
+.team-modal.dark-theme p {
+  color: $mainTextColor;
+}
+
+.team-modal.dark-theme h3 {
+  color: $descrTextColor;
+}
+
+.team-modal.dark-theme .team-modal__list-item {
+  border: 1px solid $mainTextColor;
+}
+
+.team-modal.dark-theme .icon--close {
+  stroke: $mainTextColor;
+}
+
+.team-modal.dark-theme .footer__sl-svg {
+  fill: $mainTextColor;
+
+  &:hover,
+  &:focus {
+    fill: $descrTextColor;
+  }
+}
+
+.tui-pagination.dark-theme {
+  background-color: $darkBodyColor;
+}
+
+.tui-pagination.dark-theme .tui-page-btn {
+  color: $mainTextColor;
+}
+
+.tui-pagination.dark-theme .tui-ico-ellip {
+  background-color: $mainTextColor;
+}
+
+.tui-pagination.dark-theme .tui-next,
+.tui-pagination.dark-theme .tui-prev {
+  background-color: rgba(255, 255, 255, 0.45);
+  &:hover,
+  &:focus {
+    background-color: $mainTextColor;
+  }
+}

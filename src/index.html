@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videotheque - The Movie Database (TMDB)</title>
+    <meta
+      name="description"
+      content="The Movie Database (TMDB) is a popular Videotheque, user editable database for movies and TV shows."
+    />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <link rel="shortcut icon" href="./images/movie.svg" />
+  </head>
+  <body>
+    <include src="./partials/header.html"></include>
+    <main>
+      <include src="./partials/empty-page.html"></include>
+      <include src="./partials/scroll-up-btn.html"></include>
+      <include src="./partials/movie-list.html"></include>
+      <include src="./partials/pagination.html"></include>
+    </main>
+    <footer>
+      <include src="./partials/team-modal.html"></include>
+      <include src="./partials/footer.html"></include>
+    </footer>
+    <include src="./partials/modal.html"></include>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

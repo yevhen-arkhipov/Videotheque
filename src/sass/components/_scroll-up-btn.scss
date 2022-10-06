@@ -1,0 +1,19 @@
+.scroll-up {
+  position: fixed;
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $descrTextColor;
+  bottom: 100px;
+  right: 7%;
+  cursor: pointer;
+}
+
+.scroll-up__img {
+  width: 40px;
+  height: 40px;
+}

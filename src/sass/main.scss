@@ -1,0 +1,28 @@
+@import './base/reset';
+@import './base/common';
+
+@import './utils/mixins';
+@import './utils/no-scroll';
+@import './utils/vars';
+
+@import './components/container';
+@import './components/section';
+@import './components/movie-card';
+@import './components/scroll-up-btn';
+@import './components/switch-theme';
+
+@import './components/pagination';
+@import './components/button';
+@import './components/movie-modal';
+
+@import './layouts/header';
+// @import './layouts/header-library';
+@import './layouts/section-library';
+@import './layouts/footer';
+@import './layouts/movie-list';
+@import './layouts/team-modal';
+
+@import './components/libraryCard';
+@import './utils/visually-hidden';
+
+@import './components/button__active';

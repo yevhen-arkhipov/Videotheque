@@ -1,0 +1,170 @@
+.movie-modal {
+  position: absolute;
+  background: $modalBgColor;
+  width: calc(100% - 40px);
+  max-height: calc(100% - 30px);
+  padding: 48px 20px 40px;
+  left: 50%;
+  top: 50%;
+  overflow: auto;
+  transform: translate(-50%, -50%);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    display: flex;
+    padding: 40px 36px;
+  }
+
+  @include desktop {
+    max-width: 805px;
+    padding: 40px 12px;
+  }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__poster {
+    @include tablet {
+      width: 50%;
+      padding-right: 52px;
+    }
+
+    @include desktop {
+      padding-right: 16px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__info {
+    @include tablet {
+      width: 50%;
+      padding: 0 36px 0 16px;
+    }
+
+    @include desktop {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin: 20px 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.15;
+
+    @include desktop {
+      margin-top: 0;
+      font-size: 30px;
+      line-height: 1.16;
+    }
+  }
+
+  &__descr-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  &__descr {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.67;
+    margin: 20px 0;
+  }
+
+  &__info-table {
+    td {
+      padding-bottom: 8px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.33;
+
+      &:first-child {
+        min-width: 108px;
+        color: $textColor;
+
+        @include desktop {
+          min-width: 152px;
+        }
+      }
+
+      &:last-child {
+        color: $titleTextColor;
+      }
+    }
+
+    tr:last-child {
+      td {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__rating {
+    color: $mainTextColor;
+    display: inline-block;
+    line-height: 16px;
+    background-color: $mainBtnBgColor;
+    padding: 1px 10px;
+    border-radius: 5px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin: 0 -10px;
+  }
+
+  &__btn {
+    min-width: calc(50% - 20px);
+    margin: 0 10px;
+
+    @include desktop {
+      min-width: 136px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    top: 8px;
+    right: 8px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 5px;
+
+    &:hover,
+    &:focus {
+      background-color: $descrTextColor;
+      fill: $mainBtnBgColor;
+    }
+    &:hover use,
+    &:focus use {
+      fill: $mainTextColor;
+    }
+  }
+  .modal-overlay.visually-hidden & {
+    transform: scale(1.5);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: $modalOverlayBgColor;
+}

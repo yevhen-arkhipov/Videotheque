@@ -1,0 +1,65 @@
+<header class="home">
+  <div class="header-container container">
+    <div class="header__tabs">
+      <div class="header__title-panel">
+        <a href="./index.html" class="header__logo">
+          <svg class="icon">
+            <use href="./images/sprite.svg#film"></use>
+          </svg>
+
+          <span class="logo-title">Videotheque</span>
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__controls">
+          <li>
+            <a href="index.html" class="header__controls-item btn__home current"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="library.html" class="header__controls-item btn__library"
+              >My Library</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__form-wrap">
+      <form class="header__form">
+        <label class="header__form-label">
+          <input
+            type="text"
+            name="searchQuery"
+            placeholder="Movie search"
+            class="header__form-input"
+          />
+        </label>
+        <button type="submit" class="header__search-btn">
+          <svg width="15" height="20">
+            <use href="./images/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+
+      <p class="error__message" style="display: none">
+        Search result not successful. Enter the correct movie name...
+      </p>
+    </div>
+  </div>
+  <div class="theme-switch__control">
+    <input
+      class="theme-switch__toggle"
+      type="checkbox"
+      name="theme"
+      id="theme-switch-toggle"
+      aria-label="Переключить между тёмной и светлой темой"
+    />
+    <label
+      aria-hidden="true"
+      class="theme-switch__track"
+      for="theme-switch-toggle"
+    >
+    </label>
+  </div>
+</header>

@@ -1,0 +1,47 @@
+<header class="header-library">
+    <div class="header-container container">
+      <div class="header__tabs">
+        <div class="header__title-panel">
+            <a href="./index.html" class="header__logo">
+              <svg class="icon">
+                <use href="./images/sprite.svg#film"></use>
+              </svg>
+                <span class="logo-title">Videotheque</span>
+            </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__controls">
+            <li><a href="index.html" class="header__controls-item btn__home">Home</a></li>
+            <li><a href="library.html" class="header__controls-item btn__library current">My Library</a></li>
+          </ul>
+        </nav>
+      </div>
+        <div class="header__library">
+          <ul class="header__library-buttons">
+            <li class="header__library-buttons-item">
+              <button type="button" class="library-buttons-button watched button__active">watched</button>
+            </li>
+            <li class="header__library-buttons-item">
+              <button type="button" class="library-buttons-button queue">queue</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+       <div class="theme-switch__control">
+          <input
+            class="theme-switch__toggle"
+            type="checkbox"
+            name="theme"
+            id="theme-switch-toggle"
+            aria-label="Переключить между тёмной и светлой темой"
+          />
+          <label
+            aria-hidden="true"
+            class="theme-switch__track"
+            for="theme-switch-toggle"
+          >
+          </label>
+        </div>
+    </div>
+  </header>
+
